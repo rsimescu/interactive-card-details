@@ -138,3 +138,36 @@ cvcInput.addEventListener("input", () => {
     securityCode.innerHTML = cvcInput.value;
   }
 });
+
+
+document.querySelector("#numberInput").addEventListener('keypress', function (event) {
+  if (event.key < '0' || event.key > '9') {
+      if ( event.keyCode !== 8 && event.keyCode !== 13 && event.keyCode !== 46) {
+          event.preventDefault();
+      }
+  }
+});
+
+document.querySelector("#cvcInput").addEventListener('keypress', function (event) {
+  if (event.key < '0' || event.key > '9') {
+      if ( event.keyCode !== 8 && event.keyCode !== 13 && event.keyCode !== 46) {
+          event.preventDefault();
+      }
+  }
+});
+
+document.querySelector("#month").addEventListener('keypress', function (event) {
+  if (event.key < '0' || event.key > '9') {
+      if ( event.keyCode !== 8 && event.keyCode !== 13 && event.keyCode !== 46) {
+          event.preventDefault();
+      }
+  }
+});
+
+document.querySelector("#year").addEventListener('keypress', function (event) {
+  if (event.key < '0' || event.key > '9') {
+      if ( event.keyCode !== 8 && event.keyCode !== 13 && event.keyCode !== 46) {
+          event.preventDefault();
+      }
+  }
+});
