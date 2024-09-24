@@ -1,0 +1,435 @@
+:root {
+    /* ### Primary */
+
+    --Linear-gradient
+    /*(active input border)*/
+    : hsl(249, 99%, 64%) hsl(278, 94%, 30%);
+    --Red
+    /*(input errors)*/
+    : hsl(0, 100%, 66%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+.space-grotesk-undefined {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk";
+    caret-color: transparent;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#backgroundImage {
+    position: absolute;
+    z-index: -1000;
+    height: 100vh;
+    left: 0;
+    width: 40%;
+}
+
+.backCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    position: relative;
+}
+
+.frontCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    position: relative;
+}
+
+.centerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    gap: 10%;
+}
+
+.cards img {
+    height: 42.5%;
+    width: 80%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+}
+
+#frontCardImage {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+#backCardImage {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.frontCardData {
+    position: absolute;
+    color: white;
+    box-sizing: border-box;
+    padding: 1.2rem;
+    max-width: 100%;
+    min-width: 80%;
+}
+
+#cardLogo {
+    width: 20%;
+    margin-bottom: 17%;
+}
+
+.cardPersonData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6%;
+    font-size: 0.8rem;
+}
+
+#cardNumber {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#securityCode {
+    position: absolute;
+    font-size: 0.8rem;
+    right: 10%;
+    top: 45%;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    gap: 2rem;
+}
+
+#numberInput {
+    width: 100%;
+    padding: 2%;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--Light-grayish-violet);
+
+}
+
+#numberInput:focus {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border-radius: 0.4rem;
+}
+
+#holderInput {
+    width: 100%;
+    padding: 2%;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--Light-grayish-violet);
+}
+
+#holderInput:focus {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border-radius: 0.4rem;
+}
+
+.cardHolderInputLabel {
+    margin-bottom: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+
+.cardNumberInputLabel {
+    margin-bottom: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+
+.monthAndYear {
+    display: flex;
+    gap: 5%;
+    width: 90%;
+}
+
+.securityData {
+    display: flex;
+}
+
+.expDateContainer {
+    width: 80%;
+}
+
+.expDateLabel {
+    margin-bottom: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+
+#year {
+    width: 40%;
+    padding: 5%;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--Light-grayish-violet);
+}
+
+#year:focus {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border-radius: 0.4rem;
+}
+
+#month {
+    width: 40%;
+    padding: 5%;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--Light-grayish-violet);
+}
+
+#month:focus {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border-radius: 0.4rem;
+}
+
+#cvcInput {
+    width: 100%;
+    padding: 5.5%;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--Light-grayish-violet);
+}
+
+#cvcInput:focus {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    border-radius: 0.4rem;
+}
+
+.cvcLabel {
+    margin-bottom: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+
+#confirm {
+    width: 100%;
+    padding: 3.1%;
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    background-color: black;
+    color: white;
+    border-style: none;
+}
+
+#confirm:hover {
+    background-color: rgba(0, 0, 0, 0.635);
+    cursor: pointer;
+}
+
+#continue:hover {
+    background-color: rgba(0, 0, 0, 0.635);
+    cursor: pointer;
+}
+
+#continue {
+    width: 100%;
+    padding: 3.1%;
+    font-size: 0.9rem;
+    border-radius: 0.4rem;
+    background-color: black;
+    color: white;
+    border-style: none;
+}
+
+.confirmedContainer {
+    display: flex;
+    flex-direction: column;
+    width: 78.6%;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+
+}
+
+.confirmedText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.confirmedBigText {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+
+.confirmedSmallText {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--Dark-grayish-violet);
+}
+
+.visible {
+    display: none;
+}
+
+.error {
+    display: flex !important;
+    border: 2px solid red !important;
+}
+
+.errorMsg {
+    display: flex !important;
+    font-size: 0.8rem;
+    color: red;
+    margin-top: 0.3rem;
+}
+
+.holderError {
+    display: none;
+}
+
+.numberError {
+    display: none;
+}
+
+.monthAndYearError {
+    display: none;
+}
+
+.cvcError {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    #backgroundImage {
+        content: url(images/bg-main-mobile.png);
+        width: 100%;
+        top: 0;
+        height: 30%;
+    }
+
+    body {
+        height: 100svh;
+    }
+
+    .centerContainer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 90%;
+        gap: 50px;
+    }
+
+    .backCard {
+        position: absolute;
+        top: -97px;
+        z-index: -1000;
+    }
+
+    input {
+        max-width: 100% !important;
+    }
+
+    .rightContainer {
+        max-width: 100%;
+    }
+
+    .rightContainer input {
+        font-size: 1.4rem !important;
+    }
+
+    .cvcLabel {
+        font-size: 1rem;
+    }
+
+    .expDateLabel {
+        font-size: 1rem;
+    }
+
+    .cardHolderInputLabel {
+        font-size: 1rem;
+    }
+
+    .cardNumberInputLabel {
+        font-size: 1rem;
+    }
+
+    .confirmedBigText {
+        font-size: 1.9rem;
+    }
+
+    .confirmedSmallText {
+        font-size: 1.2rem;
+    }
+
+    #continue {
+        font-size: 1.4rem;
+    }
+
+    #cvcInput{
+        width: 89%;
+    }
+
+    #numberInput{
+        width: 96%;
+    }
+
+    #holderInput{
+        width: 96%;
+    }
+}

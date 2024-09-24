@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <img id="backgroundImage" src="images/bg-main-desktop.png" width="40%" />
+    <div class="centerContainer">
+      <div class="cards">
+        <div class="frontCard">
+          <img id="frontCardImage" src="images/bg-card-front.png" />
+          <div class="frontCardData">
+            <div id="cardLogo">
+              <img src="images/card-logo.svg" width="100%" />
+            </div>
+            <div id="cardNumber">0000 0000 0000 0000</div>
+            <div class="cardPersonData">
+              <div class="personName">Jane Appleseed</div>
+              <div class="expireDate">09/00</div>
+            </div>
+          </div>
+        </div>
+        <div class="backCard">
+          <img id="backCardImage" src="images/bg-card-back.png" />
+          <div id="securityCode">000</div>
+        </div>
+      </div>
+      <div class="rightContainer">
+        <div class="cardHolder">
+          <div class="cardHolderInputLabel">CARDHOLDER NAME</div>
+          <input
+            type="text"
+            id="holderInput"
+            placeholder="e.g. Jane Appleseed"
+            maxlength="25"
+          />
+          <div class="holderError">Can't be blank</div>
+        </div>
+        <div class="cardNumerInput">
+          <div class="cardNumberInputLabel">CARD NUMBER</div>
+          <input
+            type="number"
+            id="numberInput"
+            min="0"
+            step="1"
+            maxlength="10"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <div class="numberError">Can't be blank</div>
+        </div>
+        <div class="securityData">
+          <div class="expDateContainer">
+            <div class="expDateLabel">EXP. DATE (MM/YY)</div>
+            <div class="monthAndYear">
+              <input
+                type="number"
+                id="month"
+                placeholder="MM"
+                list="monthList"
+                min="0"
+                step="1"
+              />
+              <datalist id="monthList">
+                <option value="01"></option>
+                <option value="02"></option>
+                <option value="03"></option>
+                <option value="04"></option>
+                <option value="05"></option>
+                <option value="06"></option>
+                <option value="07"></option>
+                <option value="08"></option>
+                <option value="09"></option>
+                <option value="10"></option>
+                <option value="11"></option>
+                <option value="12"></option>
+              </datalist>
+              <input
+                type="number"
+                id="year"
+                placeholder="YY"
+                list="yearList"
+                min="0"
+                step="1"
+              />
+              <datalist id="yearList">
+                <option value="2024"></option>
+                <option value="2025"></option>
+                <option value="2026"></option>
+                <option value="2027"></option>
+                <option value="2028"></option>
+                <option value="2029"></option>
+                <option value="2030"></option>
+                <option value="2031"></option>
+                <option value="2032"></option>
+                <option value="2033"></option>
+                <option value="2034"></option>
+                <option value="2035"></option>
+                <option value="2036"></option>
+                <option value="2037"></option>
+                <option value="2038"></option>
+                <option value="2039"></option>
+                <option value="2040"></option>
+              </datalist>
+            </div>
+            <div class="monthAndYearError">Can't be blank</div>
+          </div>
+          <div class="cvc">
+            <div class="cvcLabel">CVC</div>
+            <input type="number" id="cvcInput" placeholder="e.g. 123" />
+            <div class="cvcError">Can't be blank</div>
+          </div>
+        </div>
+        <button id="confirm">Confirm</button>
+      </div>
+      <div class="confirmedContainer visible">
+        <div class="confirmedIcon"><img src="images/icon-complete.svg" /></div>
+        <div class="confirmedText">
+          <div class="confirmedBigText">THANK YOU!</div>
+          <div class="confirmedSmallText">We've added your card details</div>
+        </div>
+        <button id="continue">Continue</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
