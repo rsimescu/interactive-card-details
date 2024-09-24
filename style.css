@@ -423,13 +423,24 @@ body {
 
     #cvcInput{
         width: 89%;
+        height: 32px;
     }
 
     #numberInput{
         width: 96%;
+        height: 32px;
     }
 
     #holderInput{
         width: 96%;
+        height: 32px;
+    }
+
+    #month{
+        height: 32px;
+    }
+
+    #year{
+        height: 32px;
     }
 }
